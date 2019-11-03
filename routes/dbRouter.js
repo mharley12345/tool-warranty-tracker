@@ -18,7 +18,8 @@ router.get('/' ,(req,res)=>{
 
 router.get('/all',(req,res) =>{
     db.getAll()
-    .then(tools => tools)
+    .then(tools => {
+        res.status(200).json({tools})})
      .catch(err => {res.status(500).json({message:err.message})})
 })
 router.get('/:id',(req,res)=>{

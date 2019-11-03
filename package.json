@@ -4,8 +4,10 @@
   "description": "Simple app to save warranties. Using node, express, sqlite3 for the backend",
   "main": "server.js",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "experss": "^0.0.1-security",
+    "helmet": "^3.21.2",
     "knex": "^0.20.1",
     "pg": "^7.12.1",
     "sqlite3": "^4.1.0"
