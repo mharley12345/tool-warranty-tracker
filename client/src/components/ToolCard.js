@@ -5,11 +5,13 @@ import {  Card, CardText, CardBody,
   } from 'reactstrap'
 const ToolCard = (props) =>{
     const[tools,setTools] = useState( [] )
+    console.log(tools)
     useEffect(() =>{
-     axios.get('http://localhost:5000/db/all')
+     axios.get('http://localhost:5000/db/3')
      .then(res => {
-         let tool = res.data.tools
+         let tool = res.data.tool
         let Tools =  tool.map(Tools =>{
+            console.log(tools)
            return Tools
         })
          setTools(Tools)})
@@ -33,7 +35,7 @@ const ToolCard = (props) =>{
             </CardSubtitle>
            <CardSubtitle>Quanity
           <CardText> {id.quanity}</CardText></CardSubtitle>
-           <CardSubtitle>Experation Date
+           <CardSubtitle id="exp">Experation Date
            <CardText>{id.expires}</CardText></CardSubtitle>
            <CardSubtitle>Expected Failure Date:
            <CardText>{id.expected}</CardText></CardSubtitle>

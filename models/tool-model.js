@@ -3,7 +3,7 @@ const db = require('../db/dbConfig');
 module.exports = {
      add,
       getbyId,
-     getByExp,
+     getByFilter,
     getAll    };
 
 
@@ -13,24 +13,26 @@ function getAll(){
     .then(tools => tools)
 }
 function getbyId(id) {
+    console.log(id)
     return db('tools as t')
           .select('t.id','t.name', 't.quanity', 't.expires', 't.expected','t.notes')
            .where({ id })
+     
            .first()
            .then(tools => tools)
      
    
           
         }   
-        function getByExp(range) {
+        function getByFilter(filter) {
        
             return db('tools as t')
          
-              .select('*')
-              .where({expires:range})
+              .select('t.id','t.name', 't.quanity', 't.expires', 't.expected','t.notes')
+              .where({expires:filter})
           }
 
-function add(tool) {
+function add(tools) {
     
 
     return db('tools')
