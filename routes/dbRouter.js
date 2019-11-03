@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../modules/tool-module')
+const db = require('../models/tool-model')
 
 const Change = (arr) =>{
   const Arr = arr.map(e =>{

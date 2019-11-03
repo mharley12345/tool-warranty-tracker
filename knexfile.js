@@ -4,9 +4,16 @@ module.exports = {
 
   development: {
     client: 'sqlite3',
+    useNullAsDefault:true,
     connection: {
       filename: './db/tools.db3'
-    }
+    },
+    migrations: {
+      directory: './db/migrations',
+      tableName: 'knex_migrations',
+    },
+    seeds: {
+      directory: './db/seeds',
   },
 
   staging: {
@@ -40,5 +47,5 @@ module.exports = {
       tableName: 'knex_migrations'
     }
   }
-
-};
+}
+}
