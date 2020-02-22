@@ -1,0 +1,36 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    margin-top: 60px;
+    margin-left:500px ;
+    white-space: unset;
+    border:3px solid red;
+    background-color: lightblue;
+}
+.form .form-group{
+    margin: 20px;
+}
+.form button{
+    width: 100px;
+    align-self: center;
+    color: red;
+    background-color: lightblue;
+   
+}
+.form button:hover{
+    background-color: red;
+    color: lightblue;
+}
+#dates{
+    margin: 1rem;
+}
+input{
+    width: 520px;
+    height: 2rem;
+    text-align: center;
+}
+textarea{
+    width: 520px;
+    height: 4rem;
+}

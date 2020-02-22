@@ -22,6 +22,7 @@ router.get('/' ,(req,res)=>{
 router.get('/all',(req,res) =>{
     db.getAll()
     .then(tools => {
+        console.log(tools)
         res.status(200).json({tools})})
      .catch(err => {res.status(500).json({message:err.message})})
 })

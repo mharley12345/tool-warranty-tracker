@@ -12,8 +12,8 @@ function App() {
     <div className="App">
  
           
-  <Header/>
- <Route to exact path="/all" component={Tools}/>
+  <Header Tools={Tools}/>
+ <Route to exact path="/" component={Tools}/>
   <Route   to exact path= "/search" component={Auto}/>
   <Route to exact path= "/search/:filter" component={Search}/>
   <Route to path="/add" component={Add}/>
