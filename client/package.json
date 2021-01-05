@@ -5,7 +5,7 @@
   "dependencies": {
     "algoliasearch": "^3.35.1",
     "antd": "^3.24.3",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "react": "^16.11.0",
     "react-autosuggest": "^9.4.3",
